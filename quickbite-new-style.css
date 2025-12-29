@@ -1,0 +1,285 @@
+/* Reset & Fonts */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background: #fff8f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.qbk-header {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff4c29;
+}
+
+.logo span {
+  color: #333;
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff4c29;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg') center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero .hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.btn-main {
+  padding: 14px 35px;
+  background: #ff4c29;
+  color: #fff;
+  border-radius: 35px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-main:hover {
+  background: #ff7029;
+}
+
+/* Featured Recipes / Cards */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.recipe-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover img {
+  transform: scale(1.05);
+}
+
+.recipe-card .overlay {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+}
+
+.recipe-card .overlay h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.recipe-card .overlay p {
+  font-size: 14px;
+}
+
+/* About Section */
+.about {
+  background: #fff4e6;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #ff4c29;
+}
+
+.about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Top Tips Section */
+.top-tips {
+  padding: 60px 0;
+}
+
+.top-tips h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ff4c29;
+}
+/* Newsletter Section Fully Centered */
+.cta-newsletter {
+  background: #ff4c29;
+  color: #fff;
+  padding: 100px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 16px;
+}
+
+.newsletter-inner {
+  max-width: 600px;
+  width: 100%;
+}
+
+.cta-newsletter h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.cta-newsletter p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-newsletter form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 0;
+}
+
+.cta-newsletter input[type="email"] {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 35px 0 0 35px;
+  border: none;
+  font-size: 16px;
+}
+
+.cta-newsletter button {
+  padding: 14px 25px;
+  border-radius: 0 35px 35px 0;
+  border: none;
+  background: #fff;
+  color: #ff4c29;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-newsletter button:hover {
+  background: #ffe6dc;
+}
+
+
+/* Footer */
+.qbk-footer {
+  background: #333;
+  color: #ddd;
+  padding: 60px 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-grid strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.footer-grid a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-grid a:hover {
+  color: #ff4c29;
+}
+
+.qbk-footer p {
+  text-align: center;
+  font-size: 14px;
+}
